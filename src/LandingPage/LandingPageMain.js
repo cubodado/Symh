@@ -1,19 +1,17 @@
 import './LandingPageMain.css';
 import PulsingHeart from './PulsingHeart';
 import LoadingBar from './LoadingBar';
-import { Fragment } from 'react';
+import LandingText from './LandingText';
 
 const LandingPageMain = () => {
   return (
-    <Fragment>
-      <main className="landing-div">
-        <div className="landing-text">
-          <p id="landing-text">Send your moving heart</p>
-          <PulsingHeart />
-        </div>
-        <LoadingBar />
-      </main>
-    </Fragment>
+    <main className="landing-div">
+      <div className="text-div">
+        <LandingText />
+        <PulsingHeart />
+      </div>
+      <LoadingBar />
+    </main>
   );
 };
 

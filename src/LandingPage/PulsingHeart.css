@@ -42,3 +42,36 @@
     transform: rotate(-45deg) scale(1.1);
   }
 }
+
+@media (max-width: 323px) {
+  #heart {
+    width: 20px;
+    height: 20px;
+  }
+  #heart::after {
+    width: 20px;
+    height: 20px;
+  }
+  #heart::before {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 221px) {
+  .heart-div {
+    margin-left: 6px;
+  }
+  #heart {
+    width: 10px;
+    height: 10px;
+  }
+  #heart::after {
+    width: 10px;
+    height: 10px;
+  }
+  #heart::before {
+    width: 10px;
+    height: 10px;
+  }
+}

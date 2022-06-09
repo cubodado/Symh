@@ -1,0 +1,32 @@
+.loading-bar::before {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 0.2rem;
+  top: 0.2rem;
+  content: '';
+  max-width: calc(100% - 0.4rem);
+  height: 62%;
+  background-color: #ef3d75;
+  border-radius: 1.5rem;
+  animation: loading 3s forwards cubic-bezier(0, 0, 0, 0);
+}
+
+.loading-bar {
+  position: relative;
+  width: 100%;
+  height: 1rem;
+  margin-top: 1rem;
+  border-radius: 1.5rem;
+  background-color: #fcdfef;
+}
+
+@keyframes loading {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}

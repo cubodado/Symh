@@ -12,10 +12,24 @@ body {
 }
 
 .wrapper {
-  min-height: 100vh;
+  width: 100%;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: azure;
-  min-width: 483px;
+  background: linear-gradient(-45deg, #f8f5dd, #ec81aa, #54ccf8);
+  background-size: 400% 400%;
+  animation: wave 10s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
 }

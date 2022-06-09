@@ -1,0 +1,14 @@
+.landing-text {
+  display: flex;
+  justify-content: center;
+}
+
+#landing-text {
+  font-size: 2rem;
+}
+
+@media (max-width: 600px) {
+  #landing-text {
+    font-size: 1.5rem;
+  }
+}

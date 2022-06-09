@@ -1,10 +1,10 @@
 import './App.css';
-import LandingText from './LandingPage/LandingText';
+import LandingPageMain from './LandingPage/LandingPageMain';
 
 function App() {
   return (
     <div className="wrapper">
-      <LandingText />
+      <LandingPageMain />
     </div>
   );
 }

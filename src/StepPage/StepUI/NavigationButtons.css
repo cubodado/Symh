@@ -1,0 +1,14 @@
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+svg.icons {
+  width: 2rem;
+  height: auto;
+}

@@ -17,7 +17,7 @@ const Step1 = () => {
     <main className="step-div">
       <StepInformation stepNumber={1} stepInfoText={infoText} />
       <input onChange={changeEventHandler} className="user-input"></input>
-      <NavigationButtons nextCheck={userInput} />
+      <NavigationButtons stepNumber={1} nextCheck={userInput} />
     </main>
   );
 };

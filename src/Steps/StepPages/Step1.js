@@ -5,6 +5,7 @@ import StepInformation from '../StepUI/StepInformation';
 import { useState } from 'react';
 
 const Step1 = () => {
+  const infoText = 'Write down your short letter.';
   let [userInput, setUserInput] = useState('');
 
   const changeEventHandler = () => {
@@ -14,12 +15,9 @@ const Step1 = () => {
 
   return (
     <main className="step-div">
-      <StepInformation
-        stepNumber={1}
-        stepInfoText={'Write down your short letter.'}
-      />
+      <StepInformation stepNumber={1} stepInfoText={infoText} />
       <input onChange={changeEventHandler} className="user-input"></input>
-      <NavigationButtons />
+      <NavigationButtons nextCheck={userInput} />
     </main>
   );
 };

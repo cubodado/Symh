@@ -1,11 +1,14 @@
 import './Step.css';
 import NavigationButtons from './StepUI/NavigationButtons';
+import StepInformation from './StepUI/StepInformation';
 
 const Step = () => {
   return (
     <main className="step-div">
-      <h2 className="step-text">Step 1</h2>
-      <h1 className="step-info-text">Write down your short letter.</h1>
+      <StepInformation
+        stepNumber={1}
+        stepInfoText={'Write down your short letter.'}
+      />
       <input className="user-input"></input>
       <NavigationButtons />
     </main>

@@ -7,10 +7,6 @@
   animation: fadein 1s;
 }
 
-.step-info-text {
-  text-align: center;
-}
-
 .user-input {
   background-color: transparent;
   border-radius: 1.5rem;

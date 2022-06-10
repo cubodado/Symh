@@ -2,6 +2,7 @@ import './App.css';
 import LandingPageMain from './LandingPage/LandingPageMain';
 import Step1 from './Steps/StepPages/Step1';
 import { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   let [flag, setFlag] = useState(false);
@@ -13,9 +14,16 @@ function App() {
   });
 
   return (
-    <div className="wrapper">
-      {flag === false ? <LandingPageMain /> : <Step1 />}
-    </div>
+    <BrowserRouter>
+      <div className="wrapper">
+        <Routes>
+          <Route
+            path="/"
+            element={flag === false ? <LandingPageMain /> : <Step1 />}
+          />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 

@@ -8,7 +8,7 @@ const NavigationButtons = (props) => {
     if (props.nextCheck.length === 0) {
       alert(alertMessage);
     } else {
-      alert(props.nextCheck);
+      // navigate('/step/2')
     }
   };
 
@@ -16,9 +16,13 @@ const NavigationButtons = (props) => {
     if (props.stepNumber === 1) step1NextEventHandler();
   };
 
+  const previousEventHandler = () => {
+    if (props.stepNumber === 1) return alert('This is the first page.');
+  };
+
   return (
     <div className="buttons">
-      <button>
+      <button onClick={previousEventHandler}>
         <GrPrevious className="icons" />
       </button>
       <button onClick={nextEventHandler}>

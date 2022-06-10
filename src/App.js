@@ -1,6 +1,6 @@
 import './App.css';
 import LandingPageMain from './LandingPage/LandingPageMain';
-import Step from './StepPage/Step';
+import Step1 from './Steps/StepPages/Step1';
 import { useState, useEffect } from 'react';
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className="wrapper">
-      {flag === false ? <LandingPageMain /> : <Step />}
+      {flag === false ? <LandingPageMain /> : <Step1 />}
     </div>
   );
 }

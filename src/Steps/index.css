@@ -7,15 +7,6 @@
   animation: fadein 1s;
 }
 
-.user-input {
-  background-color: transparent;
-  border-radius: 1.5rem;
-  border-color: #fcdfef;
-  border-style: solid;
-  height: 2rem;
-  padding: 0 1rem;
-}
-
 @keyframes fadein {
   0% {
     opacity: 0;

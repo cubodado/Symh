@@ -1,0 +1,8 @@
+.user-input {
+  background-color: transparent;
+  border-radius: 1.5rem;
+  border: 0.3rem #fcdfef;
+  border-style: solid;
+  height: 2rem;
+  padding: 0 1rem;
+}

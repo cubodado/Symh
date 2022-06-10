@@ -1,8 +1,9 @@
-import './Step.css';
-import NavigationButtons from './StepUI/NavigationButtons';
-import StepInformation from './StepUI/StepInformation';
+import '../index.css';
+import './Step1.css';
+import NavigationButtons from '../StepUI/NavigationButtons';
+import StepInformation from '../StepUI/StepInformation';
 
-const Step = () => {
+const Step1 = () => {
   return (
     <main className="step-div">
       <StepInformation
@@ -15,4 +16,4 @@ const Step = () => {
   );
 };
 
-export default Step;
+export default Step1;

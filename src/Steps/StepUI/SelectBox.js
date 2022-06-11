@@ -4,11 +4,11 @@ const SelectBox = (props) => {
   return (
     <div
       key={props.id}
-      id={props.shapeNumber}
-      className={props.shapeClass}
+      id={props.number}
+      className={props.class}
       onClick={props.onClick}
     >
-      <h2>{props.shapeContent}</h2>
+      <h2>{props.content}</h2>
     </div>
   );
 };

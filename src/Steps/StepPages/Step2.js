@@ -64,10 +64,10 @@ const Step2 = () => {
           return (
             <SelectBox
               key={shape.id}
-              shapeNumber={shape.shapeNumber}
-              shapeClass={shape.shapeClass}
+              number={shape.shapeNumber}
+              class={shape.shapeClass}
               onClick={heartShapeClickHandler}
-              shapeContent={shape.shapeContent}
+              content={shape.shapeContent}
             />
           );
         })}

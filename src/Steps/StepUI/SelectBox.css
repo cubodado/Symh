@@ -1,4 +1,5 @@
-.heart-shape {
+.heart-shape,
+.heart-animation {
   display: flex;
   box-sizing: border-box;
   justify-content: center;
@@ -10,6 +11,7 @@
   cursor: pointer;
 }
 
-.heart-shape.active {
+.heart-shape.active,
+.heart-animation.active {
   border: 0.3rem solid #fb0097;
 }

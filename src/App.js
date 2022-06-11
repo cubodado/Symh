@@ -22,6 +22,7 @@ function App() {
             path="/"
             element={flag === false ? <LandingPageMain /> : <Step1 />}
           />
+          <Route path="/step/1" element={<Step1 />} />
           <Route path="/step/2" element={<Step2 />} />
         </Routes>
       </div>

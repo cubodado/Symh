@@ -3,10 +3,10 @@ import { GrPrevious, GrNext } from 'react-icons/gr';
 import { useNavigate } from 'react-router-dom';
 
 const NavigationButtons = (props) => {
-  const alertMessage = 'Blank is now allowed.';
   let navigate = useNavigate();
 
   const step1NextEventHandler = () => {
+    const alertMessage = 'Blank is now allowed.';
     if (props.nextCheck.length === 0) {
       alert(alertMessage);
     } else {
@@ -14,14 +14,24 @@ const NavigationButtons = (props) => {
     }
   };
 
+  const step2NextEventHandler = () => {
+    const alertMessage =
+      'You can go to the next step if you select a heart shape.';
+    if (props.nextCheck.length === 0) {
+      alert(alertMessage);
+    } else {
+      console.log(props.nextCheck);
+    }
+  };
+
   const nextEventHandler = () => {
     if (props.stepNumber === 1) step1NextEventHandler();
-    if (props.stepNumber === 2) console.log('NOT YET.');
+    if (props.stepNumber === 2) step2NextEventHandler();
   };
 
   const previousEventHandler = () => {
     if (props.stepNumber === 1) return alert('This is the first page.');
-    if (props.stepNumber === 2) return navigate('/');
+    if (props.stepNumber === 2) return navigate('/step/1');
   };
 
   return (

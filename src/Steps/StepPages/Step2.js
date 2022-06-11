@@ -6,16 +6,26 @@ import { useState } from 'react';
 
 const Step2 = () => {
   const [heartShape, setHeartShape] = useState('');
+  const [check, setCheck] = useState(false);
   const infoText = 'Select your heart shape.';
 
-  const heartShapeClickHandler = (event) => {
-    const currentTarget = event.currentTarget;
+  const toggleHeartShape = (currentTarget) => {
     currentTarget.classList.toggle('active');
 
     if (heartShape === '') {
-      setHeartShape(event.currentTarget.id);
+      setHeartShape(currentTarget.id);
+      setCheck(true);
     } else {
       setHeartShape('');
+      setCheck(false);
+    }
+  };
+
+  const heartShapeClickHandler = (event) => {
+    if (check && event.currentTarget.id !== heartShape) {
+      alert('You can select only one shape.');
+    } else {
+      toggleHeartShape(event.currentTarget);
     }
   };
 

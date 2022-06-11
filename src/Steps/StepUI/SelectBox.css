@@ -1,0 +1,15 @@
+.heart-shape {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.5rem;
+  background-color: #fcf5f9;
+  width: 5rem;
+  height: 5rem;
+  cursor: pointer;
+}
+
+.heart-shape.active {
+  border: 0.3rem solid #fb0097;
+}

@@ -8,6 +8,12 @@
   animation: fadein 1s;
 }
 
+.select-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 @keyframes fadein {
   0% {
     opacity: 0;

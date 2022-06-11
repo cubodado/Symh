@@ -20,18 +20,30 @@ const NavigationButtons = (props) => {
     if (props.nextCheck.length === 0) {
       alert(alertMessage);
     } else {
-      console.log(props.nextCheck);
+      navigate('/step/3');
+    }
+  };
+
+  const step3NextEventHandler = () => {
+    const alertMessage =
+      'You can go to the next step if you select a heart animation.';
+    if (props.nextCheck.length === 0) {
+      alert(alertMessage);
+    } else {
+      console.log('NOT YET');
     }
   };
 
   const nextEventHandler = () => {
     if (props.stepNumber === 1) step1NextEventHandler();
     if (props.stepNumber === 2) step2NextEventHandler();
+    if (props.stepNumber === 3) step3NextEventHandler();
   };
 
   const previousEventHandler = () => {
     if (props.stepNumber === 1) return alert('This is the first page.');
     if (props.stepNumber === 2) return navigate('/step/1');
+    if (props.stepNumber === 3) return navigate('/step/2');
   };
 
   return (

@@ -5,39 +5,12 @@ import { useNavigate } from 'react-router-dom';
 const NavigationButtons = (props) => {
   let navigate = useNavigate();
 
-  const step1NextEventHandler = () => {
-    const alertMessage = 'Blank is now allowed.';
+  const validateNextEvent = () => {
     if (props.nextCheck.length === 0) {
-      alert(alertMessage);
+      alert(props.alertMessage);
     } else {
-      navigate('/step/2');
+      navigate(props.nextPage);
     }
-  };
-
-  const step2NextEventHandler = () => {
-    const alertMessage =
-      'You can go to the next step if you select a heart shape.';
-    if (props.nextCheck.length === 0) {
-      alert(alertMessage);
-    } else {
-      navigate('/step/3');
-    }
-  };
-
-  const step3NextEventHandler = () => {
-    const alertMessage =
-      'You can go to the next step if you select a heart animation.';
-    if (props.nextCheck.length === 0) {
-      alert(alertMessage);
-    } else {
-      console.log('NOT YET');
-    }
-  };
-
-  const nextEventHandler = () => {
-    if (props.stepNumber === 1) step1NextEventHandler();
-    if (props.stepNumber === 2) step2NextEventHandler();
-    if (props.stepNumber === 3) step3NextEventHandler();
   };
 
   const previousEventHandler = () => {
@@ -51,7 +24,7 @@ const NavigationButtons = (props) => {
       <button onClick={previousEventHandler}>
         <GrPrevious className="icons" />
       </button>
-      <button onClick={nextEventHandler}>
+      <button onClick={validateNextEvent}>
         <GrNext className="icons" />
       </button>
     </div>

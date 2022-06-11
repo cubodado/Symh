@@ -5,6 +5,8 @@ import StepInformation from '../StepUI/StepInformation';
 import { useState } from 'react';
 
 const Step1 = () => {
+  const alertMessage = 'Blank is now allowed.';
+  const nextPage = '/step/2';
   const infoText = 'Write down your short letter.';
   let [userInput, setUserInput] = useState('');
 
@@ -17,7 +19,12 @@ const Step1 = () => {
     <main className="step-div">
       <StepInformation stepNumber={1} stepInfoText={infoText} />
       <input onChange={changeEventHandler} className="user-input"></input>
-      <NavigationButtons stepNumber={1} nextCheck={userInput} />
+      <NavigationButtons
+        stepNumber={1}
+        nextCheck={userInput}
+        alertMessage={alertMessage}
+        nextPage={nextPage}
+      />
     </main>
   );
 };

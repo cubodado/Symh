@@ -6,6 +6,9 @@ import SelectBox from '../StepUI/SelectBox';
 import { useState } from 'react';
 
 const Step2 = () => {
+  const alertMessage =
+    'You can go to the next step if you select a heart shape.';
+  const nextPage = '/step/3';
   const heartShapes = [
     {
       id: 1,
@@ -72,7 +75,12 @@ const Step2 = () => {
           );
         })}
       </div>
-      <NavigationButtons stepNumber={2} nextCheck={heartShape} />
+      <NavigationButtons
+        stepNumber={2}
+        nextCheck={heartShape}
+        alertMessage={alertMessage}
+        nextPage={nextPage}
+      />
     </main>
   );
 };

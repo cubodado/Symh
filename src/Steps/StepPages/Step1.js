@@ -1,8 +1,10 @@
+import { useState } from 'react';
 import '../index.css';
 import './Step1.css';
-import NavigationButtons from '../../components/layout/navigation/NavigationButtons/NavigationButtons';
-import StepInformation from '../../components/layout/navigation/StepInformation/StepInformation';
-import { useState } from 'react';
+import {
+  NavigationButtons,
+  StepInformation,
+} from '../../components/layout/navigation/index';
 
 const Step1 = () => {
   const alertMessage = 'Blank is now allowed.';

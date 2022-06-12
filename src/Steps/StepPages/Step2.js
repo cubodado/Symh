@@ -1,9 +1,11 @@
+import { useState } from 'react';
 import '../index.css';
 import './Step2.css';
-import StepInformation from '../../components/layout/navigation/StepInformation/StepInformation';
-import NavigationButtons from '../../components/layout/navigation/NavigationButtons/NavigationButtons';
+import {
+  StepInformation,
+  NavigationButtons,
+} from '../../components/layout/navigation/index';
 import SelectBox from '../../components/forms/SelectBox/SelectBox';
-import { useState } from 'react';
 
 const Step2 = () => {
   const alertMessage =

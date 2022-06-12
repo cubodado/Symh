@@ -5,7 +5,7 @@ import {
   NavigationButtons,
   StepInformation,
 } from '../../../components/layout/navigation/index';
-import TextInput from '../../../components/forms/TextInput/TextInput';
+import { TextInput } from '../../../components/forms/index';
 
 const Step1 = () => {
   const alertMessage = 'Blank is now allowed.';

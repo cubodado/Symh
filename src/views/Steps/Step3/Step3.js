@@ -5,7 +5,7 @@ import {
   NavigationButtons,
   StepInformation,
 } from '../../../components/layout/navigation/index';
-import SelectBox from '../../../components/forms/SelectBox/SelectBox';
+import { SelectBox } from '../../../components/forms/index';
 
 const Step3 = () => {
   const alertMessage =

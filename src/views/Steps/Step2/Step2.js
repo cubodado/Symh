@@ -2,10 +2,10 @@ import { useState } from 'react';
 import '../index.css';
 import './Step2.css';
 import {
-  StepInformation,
   NavigationButtons,
-} from '../../components/layout/navigation/index';
-import SelectBox from '../../components/forms/SelectBox/SelectBox';
+  StepInformation,
+} from '../../../components/layout/navigation/index';
+import SelectBox from '../../../components/forms/SelectBox/SelectBox';
 
 const Step2 = () => {
   const alertMessage =

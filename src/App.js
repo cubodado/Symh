@@ -1,8 +1,6 @@
 import './App.css';
 import { LandingPage } from './components/layout/navigation/index';
-import Step1 from './Steps/StepPages/Step1';
-import Step2 from './Steps/StepPages/Step2';
-import Step3 from './Steps/StepPages/Step3';
+import { Step1, Step2, Step3 } from './views/Steps/index';
 import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 

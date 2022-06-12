@@ -5,6 +5,7 @@ import {
   NavigationButtons,
   StepInformation,
 } from '../../../components/layout/navigation/index';
+import TextInput from '../../../components/forms/TextInput/TextInput';
 
 const Step1 = () => {
   const alertMessage = 'Blank is now allowed.';
@@ -20,7 +21,7 @@ const Step1 = () => {
   return (
     <main className="step-div">
       <StepInformation stepNumber={1} stepInfoText={infoText} />
-      <input onChange={changeEventHandler} className="user-input"></input>
+      <TextInput onChange={changeEventHandler} />
       <NavigationButtons
         stepNumber={1}
         nextCheck={userInput}

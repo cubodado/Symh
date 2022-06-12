@@ -1,6 +1,6 @@
 import '../index.css';
 import './Step1.css';
-import NavigationButtons from '../StepUI/NavigationButtons';
+import NavigationButtons from '../../components/layout/navigation/Buttons/NavigationButtons';
 import StepInformation from '../StepUI/StepInformation';
 import { useState } from 'react';
 

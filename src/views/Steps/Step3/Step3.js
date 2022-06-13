@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { changeHeartAnimation } from '../../../store/step/stepsSlice';
 import '../index.css';
 import './Step3.css';
 import {
@@ -40,6 +42,7 @@ const Step3 = () => {
   ];
   const [heartAnimation, setHeartAnimation] = useState('');
   const [check, setCheck] = useState(false);
+  const dispatch = useDispatch();
 
   const toggleHeartAnimation = (currentTarget) => {
     currentTarget.classList.toggle('active');
@@ -47,6 +50,13 @@ const Step3 = () => {
     if (heartAnimation === '') {
       setHeartAnimation(currentTarget.id);
       setCheck(true);
+
+      dispatch(
+        changeHeartAnimation({
+          heartAnimation: heartAnimation,
+          check: check,
+        })
+      );
     } else {
       setHeartAnimation('');
       setCheck(false);

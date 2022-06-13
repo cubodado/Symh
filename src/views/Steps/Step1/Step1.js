@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { changeInputText } from '../../../store/step/stepsSlice';
 import '../index';
 import './Step1.css';
 import {
@@ -11,11 +13,18 @@ const Step1 = () => {
   const alertMessage = 'Blank is now allowed.';
   const nextPage = '/step/2';
   const infoText = 'Write down your short letter.';
+  const dispatch = useDispatch();
   let [userInput, setUserInput] = useState('');
 
   const changeEventHandler = () => {
     const userInputText = document.querySelector('.user-input');
     setUserInput(userInputText.value);
+
+    dispatch(
+      changeInputText({
+        inputText: userInput,
+      })
+    );
   };
 
   return (

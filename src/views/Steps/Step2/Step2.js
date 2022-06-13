@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { changeHeartShape } from '../../../store/step/stepsSlice';
 import '../index.css';
 import './Step2.css';
 import {
@@ -40,6 +42,7 @@ const Step2 = () => {
   const [heartShape, setHeartShape] = useState('');
   const [check, setCheck] = useState(false);
   const infoText = 'Select your heart shape.';
+  const dispatch = useDispatch();
 
   const toggleHeartShape = (currentTarget) => {
     currentTarget.classList.toggle('active');
@@ -47,6 +50,13 @@ const Step2 = () => {
     if (heartShape === '') {
       setHeartShape(currentTarget.id);
       setCheck(true);
+
+      dispatch(
+        changeHeartShape({
+          heartShape: heartShape,
+          check: check,
+        })
+      );
     } else {
       setHeartShape('');
       setCheck(false);

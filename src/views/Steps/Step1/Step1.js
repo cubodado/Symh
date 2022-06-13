@@ -16,15 +16,17 @@ const Step1 = () => {
   const dispatch = useDispatch();
   let [userInput, setUserInput] = useState('');
 
-  const changeEventHandler = () => {
-    const userInputText = document.querySelector('.user-input');
-    setUserInput(userInputText.value);
-
+  const updateStore = () => {
     dispatch(
       changeInputText({
         inputText: userInput,
       })
     );
+  };
+
+  const changeEventHandler = () => {
+    const userInputText = document.querySelector('.user-input');
+    setUserInput(userInputText.value);
   };
 
   return (
@@ -36,6 +38,7 @@ const Step1 = () => {
         nextCheck={userInput}
         alertMessage={alertMessage}
         nextPage={nextPage}
+        updateStore={updateStore}
       />
     </main>
   );

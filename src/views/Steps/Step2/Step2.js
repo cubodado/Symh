@@ -44,19 +44,21 @@ const Step2 = () => {
   const infoText = 'Select your heart shape.';
   const dispatch = useDispatch();
 
+  const updateStore = () => {
+    dispatch(
+      changeHeartShape({
+        heartShape: heartShape,
+        check: check,
+      })
+    );
+  };
+
   const toggleHeartShape = (currentTarget) => {
     currentTarget.classList.toggle('active');
 
     if (heartShape === '') {
       setHeartShape(currentTarget.id);
       setCheck(true);
-
-      dispatch(
-        changeHeartShape({
-          heartShape: heartShape,
-          check: check,
-        })
-      );
     } else {
       setHeartShape('');
       setCheck(false);
@@ -92,6 +94,7 @@ const Step2 = () => {
         nextCheck={heartShape}
         alertMessage={alertMessage}
         nextPage={nextPage}
+        updateStore={updateStore}
       />
     </main>
   );

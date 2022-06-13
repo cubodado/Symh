@@ -9,6 +9,7 @@ const NavigationButtons = (props) => {
     if (props.nextCheck.length === 0) {
       alert(props.alertMessage);
     } else {
+      props.updateStore();
       navigate(props.nextPage);
     }
   };

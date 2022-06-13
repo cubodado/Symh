@@ -44,19 +44,21 @@ const Step3 = () => {
   const [check, setCheck] = useState(false);
   const dispatch = useDispatch();
 
+  const updateStore = () => {
+    dispatch(
+      changeHeartAnimation({
+        heartAnimation: heartAnimation,
+        check: check,
+      })
+    );
+  };
+
   const toggleHeartAnimation = (currentTarget) => {
     currentTarget.classList.toggle('active');
 
     if (heartAnimation === '') {
       setHeartAnimation(currentTarget.id);
       setCheck(true);
-
-      dispatch(
-        changeHeartAnimation({
-          heartAnimation: heartAnimation,
-          check: check,
-        })
-      );
     } else {
       setHeartAnimation('');
       setCheck(false);
@@ -92,6 +94,7 @@ const Step3 = () => {
         nextCheck={heartAnimation}
         alertMessage={alertMessage}
         nextPage={nextPage}
+        updateStore={updateStore}
       />
     </main>
   );

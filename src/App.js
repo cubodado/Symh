@@ -19,7 +19,13 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={flag === false ? <LandingPage /> : <Step1 />}
+            element={
+              flag === false ? (
+                <LandingPage landingText={'Send your moving heart'} />
+              ) : (
+                <Step1 />
+              )
+            }
           />
           <Route path="/step/1" element={<Step1 />} />
           <Route path="/step/2" element={<Step2 />} />

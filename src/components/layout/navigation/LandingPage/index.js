@@ -3,11 +3,11 @@ import PulsingHeart from './PulsingHeart/PulsingHeart';
 import LoadingBar from './LoadingBar/LoadingBar';
 import LandingText from './LandingText/LandingText';
 
-const LandingPage = () => {
+const LandingPage = (props) => {
   return (
     <main className="landing-div">
       <div className="text-div">
-        <LandingText />
+        <LandingText landingText={props.landingText} />
         <PulsingHeart />
       </div>
       <LoadingBar />

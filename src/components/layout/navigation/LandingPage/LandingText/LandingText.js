@@ -1,7 +1,7 @@
 import './LandingText.css';
 
-const LandingText = () => {
-  return <p id="landing-text">Send your moving heart</p>;
+const LandingText = (props) => {
+  return <p id="landing-text">{props.landingText}</p>;
 };
 
 export default LandingText;

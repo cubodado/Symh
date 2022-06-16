@@ -1,3 +1,4 @@
+import '../index.css';
 import './NavigationButtons.css';
 import { GrPrevious, GrNext } from 'react-icons/gr';
 import { useNavigate } from 'react-router-dom';

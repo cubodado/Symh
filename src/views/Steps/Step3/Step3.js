@@ -8,38 +8,13 @@ import {
   StepInformation,
 } from '../../../components/layout/navigation/index';
 import { SelectBox } from '../../../components/forms/index';
+import { heartAnimations } from '../../../utils/constants/heartAnimations';
 
 const Step3 = () => {
   const alertMessage =
     'You can go to the next step if you select a heart animation.';
   const nextPage = '/step/4';
   const infoText = 'Select your heart animation.';
-  const heartAnimations = [
-    {
-      id: 1,
-      number: 'animation1',
-      class: 'heart-animation',
-      content: '✌🏻',
-    },
-    {
-      id: 2,
-      number: 'animation2',
-      class: 'heart-animation',
-      content: '👋🏻',
-    },
-    {
-      id: 3,
-      number: 'animation3',
-      class: 'heart-animation',
-      content: '👏🏻',
-    },
-    {
-      id: 4,
-      number: 'animation4',
-      class: 'heart-animation',
-      content: '🙌🏻',
-    },
-  ];
   const [heartAnimation, setHeartAnimation] = useState('');
   const [check, setCheck] = useState(false);
   const dispatch = useDispatch();

@@ -8,37 +8,12 @@ import {
   StepInformation,
 } from '../../../components/layout/navigation/index';
 import { SelectBox } from '../../../components/forms/index';
+import { heartShapes } from '../../../utils/constants/heartShapes';
 
 const Step2 = () => {
   const alertMessage =
     'You can go to the next step if you select a heart shape.';
   const nextPage = '/step/3';
-  const heartShapes = [
-    {
-      id: 1,
-      shapeNumber: 'shape1',
-      shapeClass: 'heart-shape',
-      shapeContent: '💖',
-    },
-    {
-      id: 2,
-      shapeNumber: 'shape2',
-      shapeClass: 'heart-shape',
-      shapeContent: '💕',
-    },
-    {
-      id: 3,
-      shapeNumber: 'shape3',
-      shapeClass: 'heart-shape',
-      shapeContent: '💝',
-    },
-    {
-      id: 4,
-      shapeNumber: 'shape4',
-      shapeClass: 'heart-shape',
-      shapeContent: '💘',
-    },
-  ];
   const [heartShape, setHeartShape] = useState('');
   const [check, setCheck] = useState(false);
   const infoText = 'Select your heart shape.';

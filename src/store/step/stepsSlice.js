@@ -14,7 +14,6 @@ const stepsSlice = createSlice({
     changeHeartShape: (state, action) => {
       state[1].heartShape = action.payload.heartShape;
       state[1].check = action.payload.check;
-      console.log(state[1].check);
     },
     changeHeartAnimation: (state, action) => {
       state[2].heartAnimation = action.payload.heartAnimation;

@@ -15,9 +15,17 @@ const NavigationButtons = (props) => {
   };
 
   const previousEventHandler = () => {
-    if (props.stepNumber === 1) return alert('This is the first page.');
-    if (props.stepNumber === 2) return navigate('/step/1');
-    if (props.stepNumber === 3) return navigate('/step/2');
+    if (props.stepNumber !== 1) {
+      const message =
+        'If you go back to previous page, you lost your selection. Is it okay?';
+      const result = window.confirm(message);
+      if (result) {
+        if (props.stepNumber === 2) return navigate('/step/1');
+        if (props.stepNumber === 3) return navigate('/step/2');
+      }
+    } else {
+      return alert('This is the first page.');
+    }
   };
 
   return (

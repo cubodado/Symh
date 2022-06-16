@@ -19,10 +19,7 @@ const NavigationButtons = (props) => {
       const message =
         'If you go back to previous page, you lost your selection. Is it okay?';
       const result = window.confirm(message);
-      if (result) {
-        if (props.stepNumber === 2) return navigate('/step/1');
-        if (props.stepNumber === 3) return navigate('/step/2');
-      }
+      if (result) return navigate(-1);
     } else {
       return alert('This is the first page.');
     }

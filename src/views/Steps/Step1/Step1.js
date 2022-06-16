@@ -19,7 +19,7 @@ const Step1 = () => {
   const updateStore = () => {
     dispatch(
       changeInputText({
-        inputText: userInput,
+        inputText: userInput.trim(),
       })
     );
   };

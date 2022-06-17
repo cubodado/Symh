@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { changeHeartAnimation } from '../../../store/step/stepsSlice';
 import '../index.css';
 import './Step3.css';
@@ -15,8 +15,9 @@ const Step3 = () => {
     'You can go to the next step if you select a heart animation.';
   const nextPage = '/step/4';
   const infoText = 'Select your heart animation.';
-  const [heartAnimation, setHeartAnimation] = useState('');
-  const [check, setCheck] = useState(false);
+  const steps = useSelector((state) => state.steps);
+  const [heartAnimation, setHeartAnimation] = useState(steps[2].heartAnimation);
+  const [check, setCheck] = useState(steps[2].check);
   const dispatch = useDispatch();
 
   const updateStore = () => {

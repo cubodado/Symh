@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { changeInputText } from '../../../store/step/stepsSlice';
 import '../index';
 import './Step1.css';
@@ -15,7 +15,8 @@ const Step1 = () => {
   const infoText = 'Write down your short letter.';
   const dispatch = useDispatch();
   const userInputRef = useRef();
-  let [userInput, setUserInput] = useState('');
+  const steps = useSelector((state) => state.steps);
+  let [userInput, setUserInput] = useState(steps[0].inputText);
 
   const updateStore = () => {
     dispatch(
@@ -32,7 +33,11 @@ const Step1 = () => {
   return (
     <main className="step-div">
       <StepInformation stepNumber={1} stepInfoText={infoText} />
-      <TextInput onChange={changeEventHandler} userInputRef={userInputRef} />
+      <TextInput
+        onChange={changeEventHandler}
+        userInputRef={userInputRef}
+        userInput={userInput}
+      />
       <NavigationButtons
         stepNumber={1}
         nextCheck={userInput}

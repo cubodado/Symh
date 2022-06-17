@@ -6,6 +6,7 @@ const TextInput = (props) => {
       onChange={props.onChange}
       className="user-input"
       ref={props.userInputRef}
+      value={props.userInput}
     ></input>
   );
 };

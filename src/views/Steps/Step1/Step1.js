@@ -21,13 +21,13 @@ const Step1 = () => {
   const updateStore = () => {
     dispatch(
       changeInputText({
-        inputText: userInput,
+        inputText: userInput.trim(),
       })
     );
   };
 
   const changeEventHandler = () => {
-    setUserInput(userInputRef.current.value.trim());
+    setUserInput(userInputRef.current.value);
   };
 
   return (

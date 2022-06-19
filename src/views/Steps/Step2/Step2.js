@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { changeHeartShape } from '../../../store/step/stepsSlice';
+import { changeHeartColor } from '../../../store/step/stepsSlice';
 import '../index.css';
 import './Step2.css';
 import {
@@ -8,44 +8,44 @@ import {
   StepInformation,
 } from '../../../components/layout/navigation/index';
 import { SelectBox } from '../../../components/forms/index';
-import { heartShapes } from '../../../utils/constants/heartShapes';
+import { heartColors } from '../../../utils/constants/heartColors';
 
 const Step2 = () => {
   const alertMessage =
-    'You can go to the next step if you select a heart shape.';
+    'You can go to the next step if you select a heart color.';
   const nextPage = '/step/3';
   const steps = useSelector((state) => state.steps);
-  const [heartShape, setHeartShape] = useState(steps[1].heartShape);
+  const [heartColor, setHeartColor] = useState(steps[1].heartColor);
   const [check, setCheck] = useState(steps[1].check);
-  const infoText = 'Select your heart shape.';
+  const infoText = 'Select your heart color.';
   const dispatch = useDispatch();
 
   const updateStore = () => {
     dispatch(
-      changeHeartShape({
-        heartShape: heartShape,
+      changeHeartColor({
+        heartColor: heartColor,
         check: check,
       })
     );
   };
 
-  const toggleHeartShape = (currentTarget) => {
+  const toggleHeartColor = (currentTarget) => {
     currentTarget.classList.toggle('active');
 
-    if (heartShape === '') {
-      setHeartShape(currentTarget.id);
+    if (heartColor === '') {
+      setHeartColor(currentTarget.id);
       setCheck(true);
     } else {
-      setHeartShape('');
+      setHeartColor('');
       setCheck(false);
     }
   };
 
-  const heartShapeClickHandler = (event) => {
-    if (check && event.currentTarget.id !== heartShape) {
-      alert('You can select only one shape.');
+  const heartColorClickHandler = (event) => {
+    if (check && event.currentTarget.id !== heartColor) {
+      alert('You can select only one color.');
     } else {
-      toggleHeartShape(event.currentTarget);
+      toggleHeartColor(event.currentTarget);
     }
   };
 
@@ -53,21 +53,21 @@ const Step2 = () => {
     <main className="step-div">
       <StepInformation stepNumber={2} stepInfoText={infoText} />
       <div className="select-box">
-        {heartShapes.map((shape) => {
+        {heartColors.map((color) => {
           return (
             <SelectBox
-              key={shape.id}
-              number={shape.shapeNumber}
-              class={shape.shapeClass}
-              onClick={heartShapeClickHandler}
-              content={shape.shapeContent}
+              key={color.id}
+              number={color.colorNumber}
+              class={color.colorClass}
+              onClick={heartColorClickHandler}
+              content={color.colorContent}
             />
           );
         })}
       </div>
       <NavigationButtons
         stepNumber={2}
-        nextCheck={heartShape}
+        nextCheck={heartColor}
         alertMessage={alertMessage}
         nextPage={nextPage}
         updateStore={updateStore}

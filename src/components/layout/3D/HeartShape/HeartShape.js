@@ -4,7 +4,7 @@ import { Shape, DoubleSide } from 'three';
 import { useFrame } from '@react-three/fiber';
 import { Extrude } from '@react-three/drei';
 
-const HeartShape = () => {
+const HeartShape = (props) => {
   const ref = useRef();
 
   useFrame(() => {
@@ -44,7 +44,7 @@ const HeartShape = () => {
       <Extrude args={[heartShape, extrudeSettings]}>
         <meshStandardMaterial
           flatshading
-          color="red"
+          color={props.heartColor}
           side={DoubleSide}
           roughness={0.2}
         />

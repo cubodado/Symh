@@ -3,6 +3,7 @@ import {
   StepInformation,
   ResetSaveButtons,
 } from '../../../components/layout/navigation';
+import { Card } from '../../3D/index';
 
 const Step5 = () => {
   const infoText = 'Here is your card.';
@@ -10,6 +11,7 @@ const Step5 = () => {
   return (
     <main className="step-div">
       <StepInformation stepNumber={'Clear ✨'} stepInfoText={infoText} />
+      <Card />
       <ResetSaveButtons />
     </main>
   );

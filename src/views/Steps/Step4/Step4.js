@@ -6,7 +6,6 @@ import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 const Step4 = () => {
-  const steps = useSelector((state) => state.steps);
   let [flag, setFlag] = useState(false);
 
   useEffect(() => {
@@ -14,8 +13,6 @@ const Step4 = () => {
       setFlag(true);
     }, 4500);
   });
-
-  console.log(steps);
 
   return (
     <div className="wrapper">

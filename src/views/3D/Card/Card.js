@@ -1,5 +1,5 @@
 import { Canvas } from '@react-three/fiber';
-import { HeartShape } from '../../../components/layout/3D/index';
+import { HeartShape, CardText } from '../../../components/layout/3D/index';
 import { useSelector } from 'react-redux';
 
 const Card = () => {
@@ -10,6 +10,7 @@ const Card = () => {
       <ambientLight />
       <pointLight position={[5, 5, 5]} />
       <HeartShape heartColor={steps[1].heartColor} />
+      <CardText cardText={steps[0].inputText} />
     </Canvas>
   );
 };

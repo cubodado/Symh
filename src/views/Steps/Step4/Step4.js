@@ -3,7 +3,6 @@ import './Step4.css';
 import LandingPage from '../../../components/layout/navigation/LandingPage';
 import { Step5 } from '../index';
 import { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
 
 const Step4 = () => {
   let [flag, setFlag] = useState(false);

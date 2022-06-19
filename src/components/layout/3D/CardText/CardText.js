@@ -1,17 +1,15 @@
 import { Text } from '@react-three/drei';
-import { useRef } from 'react';
-import { useFrame } from '@react-three/fiber';
+import { useSpring, animated } from '@react-spring/three';
 
 const CardText = (props) => {
-  const ref = useRef();
-
-  useFrame(() => {
-    ref.current.rotation.x += 0.01;
-    ref.current.rotation.y += 0.02;
+  const spring = useSpring({
+    loop: { reverse: true },
+    from: { scale: [0.1, 0.1, 0.1] },
+    to: { scale: [0.12, 0.12, 0.12] },
   });
 
   return (
-    <mesh ref={ref} scale={[0.12, 0.12, 0.12]}>
+    <animated.mesh scale={spring.scale}>
       <Text
         scale={[30, 30, 30]}
         position={[0, 2, 6]}
@@ -30,7 +28,7 @@ const CardText = (props) => {
       >
         {props.cardText}
       </Text>
-    </mesh>
+    </animated.mesh>
   );
 };
 

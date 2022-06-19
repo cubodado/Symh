@@ -1,17 +1,9 @@
 import './HeartShape.css';
-import { useRef } from 'react';
 import { Shape, DoubleSide } from 'three';
-import { useFrame } from '@react-three/fiber';
 import { Extrude } from '@react-three/drei';
+import { useSpring, animated } from '@react-spring/three';
 
 const HeartShape = (props) => {
-  const ref = useRef();
-
-  useFrame(() => {
-    ref.current.rotation.x += 0.01;
-    ref.current.rotation.y += 0.02;
-  });
-
   const getHeartShape = () => {
     const x = -5;
     const y = -10;
@@ -38,9 +30,14 @@ const HeartShape = (props) => {
     bevelSize: 2,
     bevelSegments: 8,
   };
+  const springScale = useSpring({
+    loop: { reverse: true },
+    from: { scale: [0.1, 0.1, 0.1] },
+    to: { scale: [0.12, 0.12, 0.12] },
+  });
 
   return (
-    <mesh ref={ref} scale={[0.12, 0.12, 0.12]}>
+    <animated.mesh scale={springScale.scale}>
       <Extrude args={[heartShape, extrudeSettings]} rotation={[0, 0, 3.1]}>
         <meshStandardMaterial
           flatshading
@@ -49,7 +46,7 @@ const HeartShape = (props) => {
           roughness={0.2}
         />
       </Extrude>
-    </mesh>
+    </animated.mesh>
   );
 };
 

@@ -13,8 +13,8 @@ const CardText = (props) => {
   return (
     <mesh ref={ref} scale={[0.12, 0.12, 0.12]}>
       <Text
-        scale={[50, 50, 50]}
-        position={[0, 0, 6]}
+        scale={[30, 30, 30]}
+        position={[0, 2, 6]}
         color={'white'}
         anchorX={'center'}
         anchorY={'middle'}
@@ -22,8 +22,8 @@ const CardText = (props) => {
         {props.cardText}
       </Text>
       <Text
-        scale={[50, 50, 50]}
-        position={[0, 0, -2]}
+        scale={[30, 30, 30]}
+        position={[0, 2, -2]}
         color={'white'}
         anchorX={'center'}
         anchorY={'middle'}

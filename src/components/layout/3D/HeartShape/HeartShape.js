@@ -41,7 +41,7 @@ const HeartShape = (props) => {
 
   return (
     <mesh ref={ref} scale={[0.12, 0.12, 0.12]}>
-      <Extrude args={[heartShape, extrudeSettings]}>
+      <Extrude args={[heartShape, extrudeSettings]} rotation={[0, 0, 3.1]}>
         <meshStandardMaterial
           flatshading
           color={props.heartColor}

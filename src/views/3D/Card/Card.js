@@ -9,7 +9,7 @@ const Card = () => {
   return (
     <Canvas className="canvas">
       <ambientLight />
-      <pointLight position={[5, 5, 8]} />
+      <pointLight position={[2, 4, 8]} />
       <HeartShape heartColor={steps[1].heartColor} />
       <CardText cardText={steps[0].inputText} />
     </Canvas>

@@ -11,6 +11,7 @@ import { TextInput } from '../../../components/forms/index';
 
 const Step1 = () => {
   const alertMessage = 'Blank is now allowed.';
+  const lengthAlertMessage = 'Maximum is 14 characters.';
   const nextPage = '/step/2';
   const infoText = 'Write down your short letter.';
   const dispatch = useDispatch();
@@ -27,7 +28,11 @@ const Step1 = () => {
   };
 
   const changeEventHandler = () => {
-    setUserInput(userInputRef.current.value);
+    if (14 < userInputRef.current.value.length) {
+      alert(lengthAlertMessage);
+    } else {
+      setUserInput(userInputRef.current.value);
+    }
   };
 
   return (

@@ -5,7 +5,7 @@ import {
 } from '../../../components/layout/navigation';
 import { Card } from '../../3D/index';
 
-const Step5 = () => {
+const Result = () => {
   const infoText = 'Here is your card.';
 
   return (
@@ -17,4 +17,4 @@ const Step5 = () => {
   );
 };
 
-export default Step5;
+export default Result;

@@ -12,7 +12,7 @@ import { TextInput } from '../../../components/forms/index';
 const Step3 = () => {
   const alertMessage =
     'You can go to the next step if you do not write down your name.';
-  const nextPage = '/step/4';
+  const nextPage = '/result';
   const infoText = 'Write down your name.';
   const steps = useSelector((state) => state.steps);
   const [heartSender, setHeartSender] = useState(steps[2].heartSender);

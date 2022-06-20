@@ -1,7 +1,7 @@
 import '../../../App.css';
 import './Step4.css';
 import LandingPage from '../../../components/layout/navigation/LandingPage';
-import { Step5 } from '../index';
+import { Result } from '../index';
 import { useEffect, useState } from 'react';
 
 const Step4 = () => {
@@ -18,7 +18,7 @@ const Step4 = () => {
       {flag === false ? (
         <LandingPage landingText={'Your heart skips a beat'} />
       ) : (
-        <Step5 />
+        <Result />
       )}
     </div>
   );

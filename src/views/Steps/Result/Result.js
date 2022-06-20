@@ -1,4 +1,5 @@
 import '../index.css';
+import './Result.css';
 import {
   StepInformation,
   ResetSaveButtons,
@@ -9,7 +10,7 @@ const Result = () => {
   const infoText = 'Here is your card.';
 
   return (
-    <main className="step-div">
+    <main className="step-div result-div">
       <StepInformation stepNumber={'Clear ✨'} stepInfoText={infoText} />
       <Card />
       <ResetSaveButtons />

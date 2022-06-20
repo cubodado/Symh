@@ -12,6 +12,7 @@ import { TextInput } from '../../../components/forms/index';
 const Step3 = () => {
   const alertMessage =
     'You can go to the next step if you do not write down your name.';
+  const lengthAlertMessage = 'Maximum is 10 characters.';
   const nextPage = '/result';
   const infoText = 'Write down your name.';
   const steps = useSelector((state) => state.steps);
@@ -28,7 +29,11 @@ const Step3 = () => {
   };
 
   const changeEventHandler = () => {
-    setHeartSender(userInputRef.current.value);
+    if (10 < userInputRef.current.value.length) {
+      alert(lengthAlertMessage);
+    } else {
+      setHeartSender(userInputRef.current.value);
+    }
   };
 
   return (

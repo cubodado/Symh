@@ -43,6 +43,7 @@ const Step3 = () => {
         onChange={changeEventHandler}
         userInputRef={userInputRef}
         userInput={heartSender}
+        placeholder={lengthAlertMessage}
       />
       <NavigationButtons
         stepNumber={3}

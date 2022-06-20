@@ -7,6 +7,7 @@ const TextInput = (props) => {
       className="user-input"
       ref={props.userInputRef}
       value={props.userInput}
+      placeholder={props.placeholder}
     ></input>
   );
 };

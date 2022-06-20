@@ -16,9 +16,10 @@ const NavigationButtons = (props) => {
   };
 
   const previousEventHandler = () => {
+    const inputType = props.stepNumber === 2 ? 'selection' : 'name';
+
     if (props.stepNumber !== 1) {
-      const message =
-        'If you go back to previous page, you lost your selection. Is it okay?';
+      const message = `If you go back to previous page, you lost your ${inputType}. Is it okay?`;
       const result = window.confirm(message);
       if (result) return navigate(-1);
     } else {

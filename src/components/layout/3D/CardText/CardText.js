@@ -20,13 +20,13 @@ const CardText = (props) => {
         {props.cardText}
       </Text>
       <Text
-        scale={[30, 30, 30]}
-        position={[0, 2, -2]}
+        scale={[15, 15, 15]}
+        position={[0, -3, 6]}
         color={'white'}
         anchorX={'center'}
         anchorY={'middle'}
       >
-        {props.cardText}
+        from {props.heartSender}
       </Text>
     </animated.mesh>
   );

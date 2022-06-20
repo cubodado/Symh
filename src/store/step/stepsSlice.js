@@ -5,7 +5,7 @@ const stepsSlice = createSlice({
   initialState: [
     { inputText: '' },
     { heartColor: '', check: false },
-    { heartAnimation: '', check: false },
+    { heartSender: '' },
   ],
   reducers: {
     changeInputText: (state, action) => {
@@ -15,13 +15,12 @@ const stepsSlice = createSlice({
       state[1].heartColor = action.payload.heartColor;
       state[1].check = action.payload.check;
     },
-    changeHeartAnimation: (state, action) => {
-      state[2].heartAnimation = action.payload.heartAnimation;
-      state[2].check = action.payload.check;
+    changeHeartSender: (state, action) => {
+      state[2].heartSender = action.payload.heartSender;
     },
   },
 });
 
-export const { changeInputText, changeHeartColor, changeHeartAnimation } =
+export const { changeInputText, changeHeartColor, changeHeartSender } =
   stepsSlice.actions;
 export default stepsSlice.reducer;

@@ -11,7 +11,10 @@ const Card = () => {
       <ambientLight />
       <pointLight position={[2, 4, 8]} />
       <HeartShape heartColor={steps[1].heartColor} />
-      <CardText cardText={steps[0].inputText} />
+      <CardText
+        cardText={steps[0].inputText}
+        heartSender={steps[2].heartSender}
+      />
     </Canvas>
   );
 };

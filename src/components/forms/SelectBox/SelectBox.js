@@ -3,11 +3,7 @@ import { useSelector } from 'react-redux';
 
 const SelectBox = (props) => {
   const steps = useSelector((state) => state.steps);
-  const active =
-    props.number === steps[1].heartShape ||
-    props.number === steps[2].heartAnimation
-      ? 'active'
-      : '';
+  const active = props.number === steps[1].heartColor ? 'active' : '';
 
   return (
     <div

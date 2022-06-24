@@ -1,5 +1,7 @@
 # Send your moving heart 💖
 
+![](./README.assets/main.png)
+
 <p align="center">
   " 말만 하는 걸로는 부족하다면,
   <br />

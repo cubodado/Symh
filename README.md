@@ -1,7 +1,5 @@
 # Send your moving heart 💖
 
-![](./README.assets/main.png)
-
 <p align="center">
   " 말만 하는 걸로는 부족하다면,
   <br />
@@ -11,6 +9,8 @@
   https://symh.netlify.app
 </p>
 <hr/>
+
+<br/>
 
 ## 💘 Motivation
 
@@ -51,7 +51,7 @@ npm install
 
 * React Persist 적용: session 활용 유저 데이터 저장
 * URL 직접 접근 제한: 카드 생성 순서 보장
-* 버튼이 아닌 브라우저 뒤로가기로 이동하는 것 제한: 유저 데이터 유효성에 따른 이동 보장
+* 브라우저 뒤로가기로 이동하는 것 제한: 유저 데이터 유효성에 따른 이동 보장
 
 ## ✍🏼 Author
 
